@@ -10,10 +10,11 @@ import Campush from './components/campush/Campush'
 import Tesimonials from './components/testimonials/Testimonials'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
+import VideoPlayer from './components/videoPlayer/VideoPlayer'
 
 
 const App=()=> {
-  const [count, setCount] = useState(0)
+  const [playState, setPlayState] = useState(false);
 
   return (
     <>
@@ -22,7 +23,7 @@ const App=()=> {
     <div className='container'>
     <Title subtitle='our program' title='What We Offer'/>
     <Programs />
-    <About/>
+    <About setPlayState={setPlayState}/>
     <Title subtitle='Gallery' title='Campus Photos'/>
     <Campush/>
     <Title subtitle='TESTIMONIALS' title='What Student Says'/>
@@ -30,6 +31,8 @@ const App=()=> {
     <Title subtitle='CONTACT US' title='Get in Touch'/>
     <Contact/>
     <Footer/>
+
+    <VideoPlayer playState={playState} setPlayState={setPlayState} />
     
 
     </div>
