@@ -32,7 +32,7 @@ const Programs = () => {
       <img src={program_3}></img>
     <div className='caption'>
       <img src={program_icon_3}></img>
-      <p>Most Graduation</p>
+      <p>Phd Program</p>
     </div>
     </div>
 
